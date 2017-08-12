@@ -12,4 +12,8 @@ export class UsersService {
     login (user) {
         return this.httpService.post('auth/login', user);
     }
+
+    fetchMatches() {
+        return this.httpService.get('matches/mine');
+    }
 }
