@@ -41,8 +41,4 @@ export class NavbarComponent implements OnInit {
 
     this.router.navigateByUrl('');
   }
-
-  fetchMatches() {
-    this.usersActions.fetchMatches();
-  }
 }

@@ -41,8 +41,4 @@ export class UsersActions {
       type: USER_LOGOUT
     });
   }
-
-  fetchMatches() {
-    this.usersService.fetchMatches().subscribe(console.log)
-  }
 }
