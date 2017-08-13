@@ -11,7 +11,7 @@ function userLogin(state, action) {
     return Object.assign({}, state, {
     userAuthenticated: result.success,
     token: result.token,
-    username: result.user ? result.user.name : null
+    username: result.user.email
   });
 }
 
