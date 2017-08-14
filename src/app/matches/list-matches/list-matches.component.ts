@@ -24,9 +24,7 @@ export class ListMatchesComponent implements OnInit {
     this.ngRedux
       .select(state => state.matches)
       .subscribe(matchesState => {
-        console.log(matchesState);
         this.matches = matchesState.matches.map(x => this.matchesService.convertDbMatchToModel(x));
-        console.log(this.matches);
       });
   }
 

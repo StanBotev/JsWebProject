@@ -21,16 +21,21 @@ export class MatchesService {
 
   convertDbMatchToModel(match): Match {
     const currentEmail = this.authService.getUser();
+    let currentuser: any;
+    let otherUser: any;
 
-    const otherUser = match.user1.user.username === currentEmail ?
-      match.user1.user : match.user2.user;
-
-
+    if (match.user1.user.email === currentEmail) {
+      otherUser =  match.user2.user;
+      currentuser = match.user1.user;
+    } else {
+      otherUser =  match.user1.user;
+      currentuser = match.user2.user;
+    }
 
     return {
       user: otherUser,
       timestamp: new Date(match.timestamp),
-      read: false
+      unread: !currentuser.read
     };
 
   }
