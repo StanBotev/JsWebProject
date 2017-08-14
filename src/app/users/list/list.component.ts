@@ -88,5 +88,4 @@ export class ListComponent implements OnInit {
   dislike (id) {
     this.usersService.dislike(id).subscribe(console.log);
   }
-
 }
