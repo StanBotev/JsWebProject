@@ -43,13 +43,17 @@ export class UsersActions {
     });
   }
 
-  getUsersList () {
-    this.usersService.list()
+  getUsersList (query?) {
+    this.usersService.list(query)
       .subscribe(users => {
-        this.ngRedux.dispatch({
-          type: USERS_LIST,
-          users
-        });
+        if (users.success !== false) {
+          this.ngRedux.dispatch({
+            type: USERS_LIST,
+            users
+          });
+        } else {
+          console.log(users); // TODO: Render on DOM
+        }
       });
   }
 }

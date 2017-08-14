@@ -13,8 +13,8 @@ export class UsersService {
     return this.httpService.post('auth/login', user);
   }
 
-  list () {
-    return this.httpService.get('users/list');
+  list (query?) {
+    return this.httpService.get(`users/list${query}`);
   }
 
   like (id) {
