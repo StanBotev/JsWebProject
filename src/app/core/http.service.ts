@@ -45,7 +45,7 @@ export class HttpService {
   private getRequestOptions(method, authenticated) {
     const headers = new Headers ();
 
-    if (method !== getMethod) {
+    if (method !== 'get') {
       headers.append('Content-Type', 'application/json');
     }
 

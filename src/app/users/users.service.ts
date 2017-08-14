@@ -10,7 +10,7 @@ export class UsersService {
   }
 
   profile (user) {
-      return this.httpService.post('auth/profile', user, true)
+      return this.httpService.post('auth/profile', user)
     }
   
   login (user) {
@@ -27,5 +27,11 @@ export class UsersService {
 
   dislike (id) {
     return this.httpService.post(`matches/unlike/${id}`, {});
+  }
+
+  myProfile () {
+    let res = this.httpService.get('auth/profile/mine')
+    console.log(res)
+    return res
   }
 }

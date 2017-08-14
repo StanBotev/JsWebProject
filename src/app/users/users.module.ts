@@ -32,19 +32,13 @@ import {
       RegisterComponent,
       LoginComponent,
       ProfileComponent,
-      CreateProfileComponent
+      CreateProfileComponent,
+      ListComponent
     ],
   providers: [
       UsersService,
       UsersActions
-    ],
-  imports: [
-    FormsModule,
-    CommonModule,
-    RegisterComponent,
-    LoginComponent,
-    ListComponent
-  ]
+    ]
 })
 
 export class UsersModule {
