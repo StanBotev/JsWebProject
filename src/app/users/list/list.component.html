@@ -1,0 +1,8 @@
+<div *ngFor="let user of users">
+  <div>
+    {{user.name}} - {{user.age}} - {{user.gender}} <!-- TODO: Style and link to profile -->
+    <button (click)="like(user._id)">Like</button>
+    <button (click)="dislike(user._id)">Dislike</button>
+  </div> 
+
+</div>
