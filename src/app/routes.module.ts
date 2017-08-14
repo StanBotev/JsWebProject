@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'users/login', component: LoginComponent },
   { path: 'matches/list', component: ListMatchesComponent, canActivate: [PrivateRoute]},
   { path: 'users/list', component: ListComponent, canActivate: [PrivateRoute] }
+  { path: 'matches/list', component: ListMatchesComponent, canActivate: [PrivateRoute]}
 ];
 
 @NgModule ({
